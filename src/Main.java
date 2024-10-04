@@ -2,11 +2,14 @@ import Ex01.builders.PizzaBuilder;
 import Ex01.entities.Pizza;
 import Ex02.builders.VeiculoBuilder;
 import Ex02.entities.Veiculo;
+import Ex03.builders.RelatorioBuilder;
+import Ex03.entities.Relatorio;
 
 public class Main {
     public static void main(String[] args) {
         showPizza();
         showVeiculo();
+        showRelatorio();
     }
 
     public static void showPizza() {
@@ -33,5 +36,15 @@ public class Main {
                 .build();
 
         System.out.println(veiculo.toString());
+    }
+
+    public static void showRelatorio() {
+        Relatorio relatorio = new RelatorioBuilder()
+                .setTitulo("TITULO")
+                .setCorpo("CORPO CORPO CORPO")
+                .setRodape("RODAPÉ")
+                .build();
+
+        System.out.println(relatorio.toString());
     }
 }
